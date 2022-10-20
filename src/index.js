@@ -8,6 +8,7 @@ import RegisterPage from './container/RegisterPage';
 import ProtectedComponent from './components/ProtectedComponent';
 import DashBoard from './container/DashBoard';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
