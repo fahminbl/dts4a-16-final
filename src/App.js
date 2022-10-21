@@ -1,11 +1,16 @@
 import DashBoard from './container/DashBoard'
+import { ThemeProvider } from '@mui/material/styles';
+import { customTheme } from './theme/customTheme';
+
 
 function App() {
   return (
     <>
-    <div className="">
+    <ThemeProvider theme={customTheme} >
+      <div className="">
         <DashBoard />
-    </div>
+      </div>
+      </ThemeProvider>
     </>
   );
 }
