@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 const ProtectedComponent = ({ children }) => {
     return (
-        <div className='flex flex-col mx-2'>
+        <div className=''>
         {children}
         </div>
     )

@@ -7,6 +7,14 @@ import { useState } from 'react';
 import { Navbar } from '../components/Navbar';
 
 const DashBoard = () => {
+    return (
+        <>
+            <Navbar />
+        </>
+    )
+}
+
+export default DashBoard;
     // const [monsters, setMonsters] = useState([])
     // useEffect(
     //     () => {
@@ -22,9 +30,7 @@ const DashBoard = () => {
     //         fetchMonsters()
     //     },[]
     // )
-    return (
-        <>
-            <Navbar />
+
             {/* {monsters.map((monster) => (
                 <div className='my-3' key={monster.id} >
                     <ul>
@@ -35,8 +41,3 @@ const DashBoard = () => {
                     </ul>
                 </div>
             ))} */}
-        </>
-    )
-}
-
-export default DashBoard;

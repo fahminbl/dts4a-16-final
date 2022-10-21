@@ -5,9 +5,8 @@ import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LoginPage from './container/LoginPage.jsx';
 import RegisterPage from './container/RegisterPage';
+import App from './App';
 import ProtectedComponent from './components/ProtectedComponent';
-import DashBoard from './container/DashBoard';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +20,7 @@ root.render(
           path='/'
           element={
             <ProtectedComponent>
-              <DashBoard />
+              <App />
             </ProtectedComponent>
           } />
       </Routes>
