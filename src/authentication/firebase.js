@@ -38,8 +38,8 @@ const signInWithGoogle = async () => {
         
         return userCredential;    
     } catch (error) {
-        console.log(error);
-        return false;
+        console.log("ERROR CODE: " + error.code)
+        console.log("ERROR MSG: " + error.message)
     }
 
     
@@ -74,8 +74,8 @@ const registerUserWithEmail = async(email, password) => {
 
         return userCredential;
     } catch (error) {
-        console.log(error);
-        return false;
+        console.log("ERROR CODE: " + error.code)
+        console.log("ERROR MSG: " + error.message);
     }
 }
 

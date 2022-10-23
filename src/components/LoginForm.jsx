@@ -1,20 +1,14 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useUserStore, {
-  selectEmail,
   selectStoreUser,
-  selectUserCredential,
 } from "../apis/user";
 import { signInWithEmail, signInWithGoogle } from "../authentication/firebase";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [msg, setMsg] = useState("");
   const nav = useNavigate();
-
-  const emailAuthenticated = useUserStore(selectEmail);
-  const userCredentialAuthenticated = useUserStore(selectUserCredential);
   const userStoreUser = useUserStore(selectStoreUser);
 
   const inputEmailOnChangeHandler = (evt) => {
@@ -29,15 +23,11 @@ const LoginForm = () => {
     evt.preventDefault();
     signInWithEmail(email, password)
       .then((res) => {
-        if (res == false)
-          setMsg("Silahkan masukkan email dan password yang benar ...");
-        else {
           nav("/");
           userStoreUser(email, res);
-        }
       })
       .catch((err) => {
-        setMsg("Something wrong ...");
+          console.log(err)
       });
   };
 
@@ -46,15 +36,11 @@ const LoginForm = () => {
   const googleOnClickHandler = (evt) => {
     signInWithGoogle()
       .then((res) => {
-        if (res == false)
-          setMsg("Silahkan masukkan email dan password yang benar ...");
-        else {
           nav("/");
           userStoreUser(res?.user?.email, res?.user);
-        }
       })
       .catch((err) => {
-        setMsg("Something wrong ...");
+       console.log(err)
       });
   };
 

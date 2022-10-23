@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import MyNavbar from "../components/MyNavbar";
 import NewsCard from "../components/NewsCard";
 import useNewsStore, {
-  selectError,
   selectFetchNews,
   selectIsLoading,
   selectNews,
@@ -13,14 +12,13 @@ export default function NewsPage() {
   const fetchNews = useNewsStore(selectFetchNews);
   const searchNews = useNewsStore(selectSearchNews);
   const newsIsLoading = useNewsStore(selectIsLoading);
-  const newsError = useNewsStore(selectError);
   const news = useNewsStore(selectNews);
 
   useEffect(() => {
     fetchNews();
     // console.log("from home");
     // console.log(news);
-  }, []);
+  }, [fetchNews]);
 
   const [isSearching, setIsSearching] = useState(false);
   const [keys, setKeys] = useState("");
@@ -46,16 +44,6 @@ export default function NewsPage() {
     setIsSearching(false);
     fetchNews();
   };
-
-  const btnLogClickHandler = () => {
-    console.log(isSearching);
-    console.log(news);
-
-    if(isSearching) {
-        var it = news[0];
-        console.log(it.headline.main);
-    }
-  }
 
   return (
     <>
