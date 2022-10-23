@@ -9,7 +9,7 @@ import { auth } from "../authentication/firebase";
 
 
 const LoginPage = () => {
-  const [user, isLoading] = useAuthState(auth)
+  const [user] = useAuthState(auth)
   const navigate = useNavigate()
 
 
@@ -20,7 +20,7 @@ const LoginPage = () => {
       } else {
         return
       }
-    }
+    }, [user, navigate]
   )
   return (
     <div className="font-sans">

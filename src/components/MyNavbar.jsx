@@ -20,7 +20,7 @@ export default function MyNavbar() {
       } else { 
         setEmail(user.email)
       }
-    }
+    },[user, isLoading, navigate]
   )
   return (
     <nav id="header" className="bg-white fixed w-full z-10 top-0 shadow">
@@ -28,7 +28,7 @@ export default function MyNavbar() {
           <div className="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
             <a
               className="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold"
-              href="#"
+              href="/news"
             >
               <i className="fas fa-sun text-pink-600 pr-3" /> News Now
             </a>

@@ -4,6 +4,7 @@ export default function NewsCard(props) {
   return (
     <div key={props.myKey} className="w-full md:w-1/2 lg:w-1/3 p-3 rounded overflow-hidden shadow-lg">
       <img
+        alt="media"
         className="w-full"
         src={props.photo}
       />
