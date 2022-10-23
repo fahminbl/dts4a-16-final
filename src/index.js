@@ -5,24 +5,34 @@ import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LoginPage from './container/LoginPage.jsx';
 import RegisterPage from './container/RegisterPage';
-import App from './App';
 import ProtectedComponent from './components/ProtectedComponent';
+import NewsPage from './container/NewsPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/login' element={
+          <ProtectedComponent>
+            <LoginPage />
+          </ProtectedComponent>
+        } />
+        <Route path='/register' element={
+          <ProtectedComponent>
+            <RegisterPage />
+          </ProtectedComponent>
+        } />
 
         <Route
-          path='/'
+          path="/"
           element={
             <ProtectedComponent>
-              <App />
+              <NewsPage />
             </ProtectedComponent>
-          } />
+          }
+        />
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
