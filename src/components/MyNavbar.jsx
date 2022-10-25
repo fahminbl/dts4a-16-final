@@ -27,7 +27,7 @@ export default function MyNavbar() {
         <div className="container mx-auto flex flex-wrap items-center">
           <div className="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
             <a
-              className="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold"
+              className="text-gray-900 relative right-5 lg:right-0 lg:left-2 text-base xl:text-xl no-underline hover:no-underline font-bold"
               href="/news"
             >
               <i className="fas fa-sun text-pink-600 pr-3" /> News Now
@@ -37,7 +37,7 @@ export default function MyNavbar() {
             <ul className="list-reset flex justify-between flex-1 pl-2 md:flex-none items-center">
               <li className="mr-3">
                 <button
-                  className="inline-block text-black no-underline hover:text-slate-500 hover:text-underline py-2 px-4"
+                  className="inline-block text-black relative lg:left-0 left-28 no-underline hover:text-slate-500 hover:text-underline py-2 px-4"
                   onClick={btnLogoutClickHandler}
                 >
                   LogOut ({email? email: 'from this'})

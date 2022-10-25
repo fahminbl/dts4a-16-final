@@ -50,27 +50,29 @@ export default function NewsPage() {
       <MyNavbar />
       {/*Container*/}
       <div className="container w-full mx-auto pt-20">
-        <div className="flex flex-row flex-wrap">
-          <p className="text-black mt-1 ml-2 font-extrabold text-3xl md:text-5xl">
+        <div className="flex flex-row justify-between flex-wrap mb-4">
+          <div className="text-black mt-1 ml-2 lg:left-2 relative md:left-0 left-28 font-extrabold text-3xl md:text-5xl">
+          <p>
             {isSearching ? "Hasil Pencarian" : "Berita Terkini"}
           </p>
-
-          <div className="relative w-full max-w-3xl px-2">
+          </div>
+          <div className="relative w-full max-w-3xl md:right-10 px-2 left-10 flex flex-row mr-2">
             <form action="#" onSubmit={submitSearchHandler}>
               <input
                 id="search-toggle"
                 name="keys"
                 type="search"
                 placeholder="search"
-                className="inline-flex absolute md:left-[500px] top-1 sm:right-[500] bg-gray-200 focus:outline-none focus:bg-white focus:shadow-md text-gray-700 font-bold rounded-md pl-12 pr-4 py-3"
+                className="inline-flex absolute md:relative md:left-[350px] md:top-4 lg:top-3 top-1 sm:right-[500] bg-gray-200 focus:outline-none focus:bg-white focus:shadow-md text-gray-700 font-bold rounded-md pl-12 pr-4 py-3"
                 value={keys}
                 onChange={txtKeysOnChangeHandler}
               />
             </form>
-          </div>
-          <button className="bg-transparent relative lg:left-0 left-72 md:left-[450px] md:top-2 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={btnClearClickHandler}>
+            <button className="bg-transparent relative ml-2 mt-2 left-72 md:left-[350px] lg:left-[420px] lg:bottom-16 md:left-[450px] md:top-2 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={btnClearClickHandler}>
             X
           </button>
+          </div>
+
           {/* <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={btnLogClickHandler}>
             log
           </button> */}

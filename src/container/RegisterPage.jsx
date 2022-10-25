@@ -18,7 +18,7 @@ const RegisterPage = () => {
         navigate('/')
       } 
       if (!user) {
-        return
+        navigate('/register')
       }
     }
     ,[user, navigate]
