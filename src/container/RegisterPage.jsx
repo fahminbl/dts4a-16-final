@@ -2,23 +2,13 @@ import React from "react";
 
 import RegisterForm from "../components/RegisterForm";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../authentication/firebase";
 
 const RegisterPage = () => {
-  const [user] = useAuthState(auth);
-  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = "Register Page";
-    if (user) {
-      navigate("/");
-    }
-    if (!user) {
-      navigate("/register");
-    }
-  }, [user, navigate]);
+  
+  });
   return (
     <div className="font-sans">
       <div className="relative flex flex-col items-center min-h-screen bg-gray-100 sm:justify-center ">

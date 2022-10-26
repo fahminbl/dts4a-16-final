@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 
 import { auth } from "../authentication/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-
 import { useNavigate } from "react-router-dom";
 
 const ProtectedComponent = ({ children }) => {
@@ -14,8 +13,10 @@ const ProtectedComponent = ({ children }) => {
       return;
     }
 
-    if (!user) {
-      navigate("/login");
+    if (user) {
+      navigate("/");
+    } else {
+      return
     }
   }, [user, loading, navigate]);
 
