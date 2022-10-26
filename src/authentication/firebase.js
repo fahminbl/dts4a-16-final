@@ -3,20 +3,22 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-import {
-  getAuth,
-  GoogleAuthProvider,
-  signOut,
-} from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signOut } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAHnS0pLD91cgZiORNO9xSlwC4Fam_WGQU",
-  authDomain: "dts-react-project.firebaseapp.com",
-  projectId: "dts-react-project",
-  storageBucket: "dts-react-project.appspot.com",
-  messagingSenderId: "747216104137",
-  appId: "1:747216104137:web:8cc0c357d8e03483653b18",
+  apiKey: "AIzaSyDOeVpEEfiavHgLuUzksdb-MQTkjWodlog",
+  authDomain: "dts2022-fb.firebaseapp.com",
+  projectId: "dts2022-fb",
+  storageBucket: "dts2022-fb.appspot.com",
+  messagingSenderId: "791408252270",
+  appId: "1:791408252270:web:83924375c3b5ce798edd7f",
+  //  apiKey: "AIzaSyAHnS0pLD91cgZiORNO9xSlwC4Fam_WGQU",
+  //  authDomain: "dts-react-project.firebaseapp.com",
+  //  projectId: "dts-react-project",
+  //  storageBucket: "dts-react-project.appspot.com",
+  //  messagingSenderId: "747216104137",
+  //  appId: "1:747216104137:web:8cc0c357d8e03483653b18",
 };
 
 // Initialize Firebase
@@ -42,26 +44,26 @@ googleProvider.addScope("email");
 //     //    const message = error.message;
 //   }
 
-  // .then((result) => {
-  //     // This gives you a Google Access Token. You can use it to access the Google API.
-  //     const credential = GoogleAuthProvider.credentialFromResult(result);
-  //     const token = credential.accessToken;
-  //     // The signed-in user info.
-  //     const user = result.user;
+// .then((result) => {
+//     // This gives you a Google Access Token. You can use it to access the Google API.
+//     const credential = GoogleAuthProvider.credentialFromResult(result);
+//     const token = credential.accessToken;
+//     // The signed-in user info.
+//     const user = result.user;
 
-  //     // ...
-  // }).catch((error) => {
-  //     // Handle Errors here.
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //     // The email of the user's account used.
-  //     const email = error.customData.email;
-  //     // The AuthCredential type that was used.
-  //     const credential = GoogleAuthProvider.credentialFromError(error);
-  //     // ...
+//     // ...
+// }).catch((error) => {
+//     // Handle Errors here.
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     // The email of the user's account used.
+//     const email = error.customData.email;
+//     // The AuthCredential type that was used.
+//     const credential = GoogleAuthProvider.credentialFromError(error);
+//     // ...
 
-  //     console.log(error);
-  // });
+//     console.log(error);
+// });
 //};
 
 // const registerUserWithEmail = async (email, password) => {
