@@ -28,9 +28,9 @@ export default function NewsCard(props) {
       {open ? (
         <>
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-            <div className="relative w-auto max-w-3xl mx-auto my-6 top-28">
+            <div className="relative max-w-3xl w-auto mx-auto my-6 top-28">
               {/*content*/}
-              <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
+              <div className="relative flex flex-col w-[360px] md:w-full lg:w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid rounded-t border-slate-200">
                   <h3 className="text-3xl font-semibold">{props.title}</h3>
@@ -53,7 +53,7 @@ export default function NewsCard(props) {
                   </p>
                   <p className="my-4 text-lg leading-relaxed text-slate-500">
                     Source:{" "}
-                    <a href={props.url} className="text-blue-500">
+                    <a href={props.url} className="text-blue-500 my-4 text-lg leading-relaxed">
                       {props.url}
                     </a>
                   </p>
