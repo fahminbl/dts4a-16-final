@@ -10,4 +10,4 @@ Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google
 
 # Penjelasan
 Website ini berisi berita dari NYTimes API, yang mana menggunakan kategori search dan topstories
-Kami menambahkan fitur unik berupa pencarian sesuai dengan keyword yang anda butuhkan, terimakasih 
+Kami menambahkan fitur unik berupa pencarian sesuai dengan keyword yang anda butuhkan,terimakasih 
