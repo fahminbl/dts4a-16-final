@@ -3,7 +3,7 @@
 Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google.com/document/d/122KyWNQ4xxU4aFwWbM4vIfH7LM4AH2CZEZa3YsEHjCk). 
 
 
-![](./vidma_recorder_edited_26102022_231100.gif)
+![](./2022-10-27-09-17-40.gif)
 
 
 [Link LiveApp](https://nyus-nyos.netlify.app/)
